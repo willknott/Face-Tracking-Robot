@@ -1,0 +1,24 @@
+Followed the link from http://cranklin.wordpress.com/2012/04/26/my-face-tracking-robot/
+where Cranklin explains the project...
+Text below...
+
+My Face Tracking Robot
+April 26, 2012
+
+I’ve been playing with the OpenCV (Computer Vision) library for Python in my spare time, and it is pretty fun. It opens up a whole new world of possibilities. Now I can work on motion detection, facial recognition, sentry guns, etc.
+
+Previously, I rigged up a miniature motion-controlled turret using 9g micro servos, cardboard and duct tape.
+This time, I got a little more serious and used MG-995 servos and better hardware. The arduino software works exactly the same however, so I could just plug it right in.
+
+That’s cool and all, but I want it to track people or track faces and follow them automatically. So… I mounted a webcam on top of my device and I wrote up some quick arduino code that listens for signals through the serial/USB port and moves it in the appropriate direction.
+
+
+
+All the face tracking goodness will happen on the laptop then send signals to the arduino which will then rotate the pair of servos accordingly. Sounds like a plan!
+
+Now, I made 2 different versions of the arduino code and 2 different versions of the python code because I wasn’t sure what would work better.
+Face detection requires Haar cascades which require training. For your information, I didn’t need to train my program, I just used cascade files that were available to me. (Already includes full body, frontal face, profile face, upper body, lower body, etc.) Without further training, it has difficulty detecting tilted faces, sideways faces, and upside-down faces.
+
+-----------
+
+What I would like to build is an art isntallation, a Georgon / Medusa who sits with her eyes closed, but the snakes in her hair lock on to faces of viewers and follow them around the room, wav in a pre-derermined pattern when there are no faces tracked.
